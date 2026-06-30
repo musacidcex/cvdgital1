@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Arabic:wght@400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0c0f14;
+  --gold: #b8975a;
+  --paper: #faf8f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Noto Serif Arabic', serif;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-2 text-ink font-display;
+}
+
+.section-subtitle {
+  @apply text-sm tracking-widest text-gold uppercase mb-8;
+}
+
+.card {
+  @apply bg-white border border-black/5 rounded-2xl shadow-[0_2px_20px_rgba(0,0,0,0.04)];
+}
+
+.gold-line {
+  background: linear-gradient(90deg, transparent, #b8975a, transparent);
+  height: 1px;
+}
+
+@media print {
+  nav, .no-print {
+    display: none !important;
+  }
+}
